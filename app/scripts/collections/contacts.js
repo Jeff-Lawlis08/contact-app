@@ -5,8 +5,8 @@ import $ from 'jquery';
 export default Backbone.Collection.extend({
   model: Contact,
   url: 'https://api.backendless.com/v1/data/contacts',
-  parse(response) {
-    console.log(response.data);
-    return response.data;
+  parse(data) {
+    console.log(data.data);
+    return data.data;
   }
 });

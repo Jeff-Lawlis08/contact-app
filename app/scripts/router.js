@@ -19,7 +19,7 @@ const Router = Backbone.Router.extend({
   routes: {
     ''        : 'home',
     'contacts': 'contacts',
-    'contacts/:id': 'viewContact'
+    'contacts/:objectId': 'viewContact'
   },
   home() {
     if(user.get('user-token')) {
@@ -47,6 +47,14 @@ container.append(renderSignup(user));
     container.append(renderContactList(contacts));
 }
   },
+  viewContact() {
+    if(!user.get('user-token')) {
+      this.navigate('', {trigger: true});
+    } else {
+      container.empty();
+      container.append(renderViewContact(contacts));
+    }
+  }
 });
 
 
