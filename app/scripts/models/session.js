@@ -1,6 +1,6 @@
-import $ from 'jquery';
-import Backbone from 'backbone';
-
-// function session(user) {
-//   this.
-// }
+// import $ from 'jquery';
+// import Backbone from 'backbone';
+//
+// export default Backbone.Model.extend({
+//
+// });

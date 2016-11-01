@@ -24,7 +24,7 @@ function renderSignup(user) {
         let email = signupForm.find('.signupEmail').val();
         let password = signupForm.find('.signupPassword').val();
       user.userSignup(name, email, password);
-      location.hash = 'contacts';
+    
     });
   return signupForm;
 }

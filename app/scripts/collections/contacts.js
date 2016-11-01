@@ -4,5 +4,9 @@ import $ from 'jquery';
 
 export default Backbone.Collection.extend({
   model: Contact,
-  url: 'http://tiny-za-server.herokuapp.com/collections/jeffscontactsusers'
+  url: 'https://api.backendless.com/v1/data/contacts',
+  parse(response) {
+    console.log(response.data);
+    return response.data;
+  }
 });

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 
-function renderContactForm(user) {
+function renderContactForm(contacts) {
   const contactForm = $(`
     <form class="contact-form">
       <input class="name" type="text" placeholder="Full Name">
@@ -18,13 +18,20 @@ function renderContactForm(user) {
 
     contactForm.on('submit', function(e) {
       e.preventDefault();
-      console.log('you submitted contact-form');
       let name = contactForm.find('.name').val();
       let nickname = contactForm.find('.nickname').val();
       let email = contactForm.find('.contactEmail').val();
       let phone = contactForm.find('.contactPhone').val();
-    user.makeNewContact(name, nickname, email, phone);
-    // location.hash = ''
+    contacts.create({name, nickname, email, phone}, {
+      headers: {
+        'application-id': '225A74F3-48BF-FE12-FF6A-7F83A8F8FD00',
+        'secret-key': '4B61C78E-CB55-C2B6-FFCC-C9D23C29C100',
+        'Content-Type':'application/json',
+        'application-type': 'REST'
+      },
+
+    });
+    // location.hash = 'contacts';
     });
     return contactForm;
 }

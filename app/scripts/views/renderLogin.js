@@ -18,7 +18,7 @@ function renderLogin(user) {
       let  email = loginForm.find('.loginEmail').val();
       let  password = loginForm.find('.loginPassword').val();
       user.userLogin(email, password);
-      location.hash = 'contacts';
+      // location.hash = 'contacts';
 });
 return loginForm;
 }
