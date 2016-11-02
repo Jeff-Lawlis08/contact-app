@@ -3,6 +3,7 @@ import Backbone from 'backbone';
 
 function renderContactForm(contacts, user) {
   const contactForm = $(`
+    <h3 class="contact-formHead">Create New Contact: </h3>
     <form class="contact-form">
       <input class="name" type="text" placeholder="Full Name">
       </input>
