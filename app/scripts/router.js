@@ -39,11 +39,12 @@ container.append(renderSignup(user));
       'application-id': '225A74F3-48BF-FE12-FF6A-7F83A8F8FD00',
       'secret-key': '4B61C78E-CB55-C2B6-FFCC-C9D23C29C100',
       'Content-Type':'application/json',
-      'application-type': 'REST'
+      'application-type': 'REST',
+      'user-token': user.get('user-token')
     }
     });
     container.empty();
-    container.append(renderContactForm(contacts));
+    container.append(renderContactForm(contacts, user));
     container.append(renderContactList(contacts));
 }
   },

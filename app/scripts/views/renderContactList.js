@@ -3,9 +3,10 @@ import Backbone from 'backbone';
 import renderListItem from './renderListItem';
 
 function renderContactList(contacts) {
-  let list = $(`
-    <ul class="contact-list"></ul>
 
+  let list = $(`
+    <ul class="contact-list">
+    </ul>
     `);
     console.log(contacts);
     contacts.forEach((contact, i, arr) => {

@@ -5,7 +5,7 @@ import router from '../router';
 
 
 export default Backbone.Model.extend({
-  idAttribute: 'objectId',
+  // idAttribute: 'objectId',
   defaults: {
     name: '',
     email: '',

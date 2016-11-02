@@ -3,12 +3,14 @@ import Backbone from 'backbone';
 
 function renderSignup(user) {
     // <h3 class="signupHead">Sign Up Here!</h3>
-  const signupHeader = $(`
-    <h3 class="signupHead>Sign Up Here!"
-    </h3>
-    `);
+  // const signupHeader = $(`
+  //   <h3 class="signupHead>Sign Up Here!"
+  //   </h3>
+  //   `);
   const signupForm = $(`
-
+    <h5>No Account Yet?</h5>
+    <h3 class="signupHead">Sign Up Here!
+    </h3>
     <form class="signup">
       <input class="signupName" type="text" placeholder="Username"></input>
       <input class="signupEmail" type="email" placeholder="email"></input>
@@ -24,7 +26,7 @@ function renderSignup(user) {
         let email = signupForm.find('.signupEmail').val();
         let password = signupForm.find('.signupPassword').val();
       user.userSignup(name, email, password);
-    
+
     });
   return signupForm;
 }
